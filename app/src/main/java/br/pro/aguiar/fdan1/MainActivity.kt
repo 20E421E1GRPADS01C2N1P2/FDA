@@ -3,6 +3,8 @@ package br.pro.aguiar.fdan1
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -15,8 +17,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        /*
         btnLancarD4.setOnClickListener {
             lancarDado(4)
+            // Acao 1
+            // Acao 2
         }
         btnLancarD6.setOnClickListener {
             lancarDado(6)
@@ -26,6 +31,16 @@ class MainActivity : AppCompatActivity() {
         }
         btnLancarD20.setOnClickListener {
             lancarDado(20)
+        }
+         */
+    }
+
+    fun actionLancarDado(it: View) {// Java -> Void | Kotlin -> Unit
+        when (it.id) {
+            R.id.btnLancarD4 -> lancarDado(4)
+            R.id.btnLancarD6 -> lancarDado(6)
+            R.id.btnLancarD10 -> lancarDado(10)
+            R.id.btnLancarD20 -> lancarDado(20)
         }
     }
 
