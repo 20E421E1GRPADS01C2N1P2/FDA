@@ -3,36 +3,41 @@ package br.pro.aguiar.fdan1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_home.*
+import java.util.*
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         Log.i("CicloDeVida", "HomeActivity onCreate")
+
+
+        var usuarioNome = intent.getStringExtra("userName")
+        var usuarioIdade = intent.getIntExtra("userAge", 18)
+
+        Toast.makeText(
+            this,
+            "Olá $usuarioNome",
+            Toast.LENGTH_LONG
+        ).show()
     }
 
-    override fun onStart() {
-        super.onStart()
-        Log.i("CicloDeVida", "HomeActivity onStart")
-    }       // Vai para onResume
-    override fun onResume() {
-        super.onResume()
-        Log.i("CicloDeVida", "HomeActivity onResume")
-    }       // Activity Ativa
-    override fun onPause() {
-        super.onPause()
-        Log.i("CicloDeVida", "HomeActivity onPause")
-    }       // Volta para o onResume
-    override fun onStop() {
-        super.onStop()
-        Log.i("CicloDeVida", "HomeActivity onStop")
-    }           // Vai para o onRestart
-    override fun onRestart() {
-        super.onRestart()
-        Log.i("CicloDeVida", "HomeActivity onRestart")
-    }       // Volta para o onStart
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.i("CicloDeVida", "HomeActivity onDestroy")
+
+    fun actionLancarDado(it: View) {// Java -> Void | Kotlin -> Unit
+        when (it.id) {
+            R.id.btnLancarD4 -> lancarDado(4)
+            R.id.btnLancarD6 -> lancarDado(6)
+            R.id.btnLancarD10 -> lancarDado(10)
+            R.id.btnLancarD20 -> lancarDado(20)
+        }
+    }
+    private fun lancarDado(dado: Int) {
+        var valorDado = Random().nextInt(dado) + 1 // [1 .. 7[
+        textViewValorDado.text = "$valorDado"
+        textViewHistoricoLancamento.text =
+            "D$dado:\t\t$valorDado\n" + textViewHistoricoLancamento.text.toString()
     }
 }
