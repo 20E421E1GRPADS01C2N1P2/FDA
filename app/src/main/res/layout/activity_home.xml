@@ -7,76 +7,97 @@
     tools:context=".HomeActivity">
 
 
-    <TextView
-        android:id="@+id/textViewHistoricoLancamento"
+<!--    <TextView-->
+<!--        android:id="@+id/textViewHistoricoLancamento"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:hint="Histórico de Lançamento"-->
+<!--        android:textSize="30sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/textViewValorDado"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewValorDado"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:text="D6"-->
+<!--        android:textSize="36sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/btnLancarD10"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnLancarD4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="actionLancarDado"-->
+<!--        android:text="D4"-->
+<!--        android:textSize="30sp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/btnLancarD6"-->
+<!--        app:layout_constraintHorizontal_bias="0.34"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        tools:layout_editor_absoluteY="176dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnLancarD10"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="4dp"-->
+<!--        android:onClick="actionLancarDado"-->
+<!--        android:text="D10"-->
+<!--        android:textSize="30sp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/btnLancarD20"-->
+<!--        tools:layout_editor_absoluteY="176dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnLancarD20"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="4dp"-->
+<!--        android:onClick="actionLancarDado"-->
+<!--        android:text="D20"-->
+<!--        android:textSize="30sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        tools:layout_editor_absoluteY="176dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnLancarD6"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:onClick="actionLancarDado"-->
+<!--        android:text="D6"-->
+<!--        android:textSize="30sp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/btnLancarD10"-->
+<!--        tools:layout_editor_absoluteY="176dp" />-->
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="br.pro.aguiar.fdan1.DadoFragment"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
-        android:hint="Histórico de Lançamento"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewValorDado"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_dado" />
 
-    <TextView
-        android:id="@+id/textViewValorDado"
-        android:layout_width="wrap_content"
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="br.pro.aguiar.fdan1.DadoFragment"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="D6"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnLancarD10"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <Button
-        android:id="@+id/btnLancarD4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:onClick="actionLancarDado"
-        android:text="D4"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnLancarD6"
-        app:layout_constraintHorizontal_bias="0.727"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnLancarD6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="16dp"
-        android:onClick="actionLancarDado"
-        android:text="D6"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnLancarD10" />
-
-    <Button
-        android:id="@+id/btnLancarD10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="16dp"
-        android:onClick="actionLancarDado"
-        android:text="D10"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnLancarD20" />
-
-    <Button
-        android:id="@+id/btnLancarD20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="16dp"
-        android:onClick="actionLancarDado"
-        android:text="D20"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment"
+        tools:layout="@layout/fragment_dado" />
 </androidx.constraintlayout.widget.ConstraintLayout>

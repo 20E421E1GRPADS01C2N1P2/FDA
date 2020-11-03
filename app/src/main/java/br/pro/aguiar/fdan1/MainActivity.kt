@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(alterActivity)
         }
-
         btnExercicio2.setOnClickListener {
             // ExercicioDoisActivity
             var intent = Intent(
