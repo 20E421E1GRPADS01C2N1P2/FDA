@@ -1,6 +1,7 @@
 package br.pro.aguiar.fdan1
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -25,13 +26,23 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(alterActivity)
         }
-
         btnExercicio2.setOnClickListener {
             // ExercicioDoisActivity
             var intent = Intent(
                 this,
                 ExercicioDoisActivity::class.java)
             startActivity(intent)
+        }
+
+        textViewHomePage.setOnClickListener {
+            var homePageIntent = Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://www.google.com/")
+            )
+            if (homePageIntent.resolveActivity(packageManager) != null)
+                startActivity(homePageIntent)
+            // else
+                // tratamento
         }
     }
 
