@@ -32,6 +32,13 @@ class MainActivity : AppCompatActivity() {
                 ExercicioDoisActivity::class.java)
             startActivity(intent)
         }
+
+        btnExercicio3.setOnClickListener {
+            var exc3Intent = Intent(
+                this, ExercicioTresActivity::class.java
+            )
+            startActivity(exc3Intent)
+        }
     }
 
 }
