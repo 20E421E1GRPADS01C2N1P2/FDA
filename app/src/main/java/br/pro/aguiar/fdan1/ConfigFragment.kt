@@ -22,7 +22,7 @@ class ConfigFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btnConfigSalvar.setOnClickListener {
-            findNavController().popBackStack()
+            findNavController().navigate(R.id.homeLivroActivity)
         }
     }
 

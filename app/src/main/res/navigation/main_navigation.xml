@@ -14,10 +14,28 @@
         android:id="@+id/configFragment"
         android:name="br.pro.aguiar.fdan1.ConfigFragment"
         android:label="fragment_config"
-        tools:layout="@layout/fragment_config" />
+        tools:layout="@layout/fragment_config" >
+        <action
+            android:id="@+id/action_configFragment_to_homeLivroActivity"
+            app:destination="@id/homeLivroActivity" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="br.pro.aguiar.fdan1.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_dadoFragment"
+            app:destination="@id/dadoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dadoFragment"
+        android:name="br.pro.aguiar.fdan1.DadoFragment"
+        android:label="fragment_dado"
+        tools:layout="@layout/fragment_dado" />
+    <activity
+        android:id="@+id/homeLivroActivity"
+        android:name="br.pro.aguiar.fdan1.HomeLivroActivity"
+        android:label="activity_home_livro"
+        tools:layout="@layout/activity_home_livro" />
 </navigation>

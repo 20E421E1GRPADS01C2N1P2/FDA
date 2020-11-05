@@ -24,7 +24,7 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btnPerfilVoltar.setOnClickListener {
-            findNavController().popBackStack()
+            findNavController().navigate(R.id.dadoFragment)
         }
     }
 
