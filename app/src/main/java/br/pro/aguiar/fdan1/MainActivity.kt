@@ -39,6 +39,13 @@ class MainActivity : AppCompatActivity() {
             )
             startActivity(exc3Intent)
         }
+
+        btnExercicio4.setOnClickListener {
+            var exc4Intent = Intent(
+                this, MavigateActivity::class.java
+            )
+            startActivity(exc4Intent)
+        }
     }
 
 }

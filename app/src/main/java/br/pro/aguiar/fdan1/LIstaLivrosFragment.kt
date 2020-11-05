@@ -17,7 +17,10 @@ class LIstaLivrosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_l_ista_livros, container, false)
+        return inflater.inflate(
+            R.layout.fragment_l_ista_livros,
+            container,
+            false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
