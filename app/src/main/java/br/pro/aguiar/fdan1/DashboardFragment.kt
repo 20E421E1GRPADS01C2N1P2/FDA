@@ -22,13 +22,13 @@ class DashboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnConfiguracoes.setOnClickListener {
-            findNavController().navigate(R.id.action_dashboardFragment_to_configFragment)
-        }
-
-        btnPerfil.setOnClickListener {
-            findNavController().navigate(R.id.profileFragment)
-        }
+//        btnConfiguracoes.setOnClickListener {
+//            findNavController().navigate(R.id.action_dashboardFragment_to_configFragment)
+//        }
+//
+//        btnPerfil.setOnClickListener {
+//            findNavController().navigate(R.id.profileFragment)
+//        }
 
     }
 }
