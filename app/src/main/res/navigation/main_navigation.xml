@@ -15,4 +15,9 @@
         android:name="br.pro.aguiar.fdan1.ConfigFragment"
         android:label="fragment_config"
         tools:layout="@layout/fragment_config" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="br.pro.aguiar.fdan1.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

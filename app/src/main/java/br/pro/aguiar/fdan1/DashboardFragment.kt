@@ -23,7 +23,11 @@ class DashboardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btnConfiguracoes.setOnClickListener {
-            findNavController().navigate(R.id.configFragment)
+            findNavController().navigate(R.id.action_dashboardFragment_to_configFragment)
+        }
+
+        btnPerfil.setOnClickListener {
+            findNavController().navigate(R.id.profileFragment)
         }
 
     }
