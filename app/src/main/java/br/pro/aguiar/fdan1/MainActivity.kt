@@ -46,6 +46,14 @@ class MainActivity : AppCompatActivity() {
             )
             startActivity(exc4Intent)
         }
+
+        btnExercicio5.setOnClickListener {
+            startActivity(
+                Intent(
+                    this, ExercicioCincoActivity::class.java
+                )
+            )
+        }
     }
 
 }

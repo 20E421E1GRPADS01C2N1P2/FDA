@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="br.pro.aguiar.fdan1.DashboardFragment"
+        android:name="br.pro.aguiar.fdan1.ui.dashboard.DashboardFragment"
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" />
     <fragment
         android:id="@+id/configFragment"
-        android:name="br.pro.aguiar.fdan1.ConfigFragment"
+        android:name="br.pro.aguiar.fdan1.ui.ConfigFragment"
         android:label="fragment_config"
         tools:layout="@layout/fragment_config" >
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="br.pro.aguiar.fdan1.ProfileFragment"
+        android:name="br.pro.aguiar.fdan1.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
