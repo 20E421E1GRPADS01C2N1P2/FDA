@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ExercicioCincoActivity"></activity>
-        <activity android:name=".MavigateActivity" />
+        <activity android:name=".navigate.MavigateActivity" />
         <activity android:name=".HomeLivroActivity" />
         <activity android:name=".ExercicioTresActivity" />
         <activity android:name=".ExercicioDoisActivity" />

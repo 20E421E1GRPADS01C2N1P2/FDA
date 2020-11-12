@@ -28,7 +28,7 @@ class DashboardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var dashboardViewModelFactory = DashboardViewModelFactory()
-        var viewModelProvider = ViewModelProvider(this, dashboardViewModelFactory)
+        var viewModelProvider = ViewModelProvider(requireActivity(), dashboardViewModelFactory)
 
         dashboardViewModel = viewModelProvider.get(DashboardViewModel::class.java)
 
@@ -38,11 +38,6 @@ class DashboardFragment : Fragment() {
                 viewLifecycleOwner, Observer {
                     textViewCarQuantidadeCompras.text =
                         it.toString()
-                    Toast.makeText(
-                        requireContext(),
-                        "Quantidade atualizada.",
-                        Toast.LENGTH_LONG
-                    ).show()
                 }
             )
 

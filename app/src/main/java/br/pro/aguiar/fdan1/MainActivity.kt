@@ -3,6 +3,7 @@ package br.pro.aguiar.fdan1
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import br.pro.aguiar.fdan1.navigate.MavigateActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
