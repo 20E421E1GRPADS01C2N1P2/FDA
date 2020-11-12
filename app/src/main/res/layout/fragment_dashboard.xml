@@ -22,13 +22,13 @@
 
 
     <TextView
-        android:id="@+id/textViewCarrinhoCompras"
+        android:id="@+id/textViewCarQuantidadeCompras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:text="TextView"
+        android:hint="0"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +42,7 @@
         android:layout_marginTop="8dp"
         android:text="+"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCarrinhoCompras" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCarQuantidadeCompras" />
 
     <Button
         android:id="@+id/btnCarrinhoSub"
@@ -52,5 +52,27 @@
         android:layout_marginEnd="32dp"
         android:text="-"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCarrinhoCompras" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCarQuantidadeCompras" />
+
+    <TextView
+        android:id="@+id/textViewCarValorTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:hint="0.00"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLabelMoeda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:text="R$"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewCarValorTotal" />
 </androidx.constraintlayout.widget.ConstraintLayout>

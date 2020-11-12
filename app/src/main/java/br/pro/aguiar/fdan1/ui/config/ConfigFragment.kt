@@ -1,11 +1,10 @@
-package br.pro.aguiar.fdan1.ui
+package br.pro.aguiar.fdan1.ui.config
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import br.pro.aguiar.fdan1.R
 
 class ConfigFragment : Fragment() {

@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import br.pro.aguiar.fdan1.R
 import kotlinx.android.synthetic.main.fragment_dashboard.*
@@ -30,14 +32,33 @@ class DashboardFragment : Fragment() {
 
         dashboardViewModel = viewModelProvider.get(DashboardViewModel::class.java)
 
-        textViewCarrinhoCompras.text = dashboardViewModel.quantidadeCarrinho.toString()
+        dashboardViewModel
+            .quantidadeCarrinho
+            .observe(
+                viewLifecycleOwner, Observer {
+                    textViewCarQuantidadeCompras.text =
+                        it.toString()
+                    Toast.makeText(
+                        requireContext(),
+                        "Quantidade atualizada.",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            )
+
+        dashboardViewModel
+            .valorTotal
+            .observe(viewLifecycleOwner) {
+                textViewCarValorTotal.text = it.toString()
+            }
+
 
         btnCarrinhoAdd.setOnClickListener {
-            textViewCarrinhoCompras.text = dashboardViewModel.addCarrinho().toString()
+            dashboardViewModel.addCarrinho()
         }
 
         btnCarrinhoSub.setOnClickListener {
-            textViewCarrinhoCompras.text = dashboardViewModel.subCarrinho().toString()
+              dashboardViewModel.subCarrinho()
         }
 
     }

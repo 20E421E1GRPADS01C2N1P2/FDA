@@ -12,16 +12,16 @@ class ExercicioCincoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercicio_cinco)
 
-        textViewCarrinhoCompras.text = quantidadeCarrinho.toString()
+        textViewCarQuantidadeCompras.text = quantidadeCarrinho.toString()
 
         btnCarrinhoAdd.setOnClickListener {
             quantidadeCarrinho++
-            textViewCarrinhoCompras.text = quantidadeCarrinho.toString()
+            textViewCarQuantidadeCompras.text = quantidadeCarrinho.toString()
         }
 
         btnCarrinhoSub.setOnClickListener {
             quantidadeCarrinho--
-            textViewCarrinhoCompras.text = quantidadeCarrinho.toString()
+            textViewCarQuantidadeCompras.text = quantidadeCarrinho.toString()
         }
 
     }
