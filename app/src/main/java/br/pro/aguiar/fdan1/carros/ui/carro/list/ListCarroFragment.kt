@@ -7,19 +7,27 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import br.pro.aguiar.fdan1.R
+import br.pro.aguiar.fdan1.carros.FullViewModel
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.list_carro_fragment.*
 
 class ListCarroFragment : Fragment() {
 
     private lateinit var listCarroViewModel: ListCarroViewModel
+    private lateinit var fullViewModel: FullViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.list_carro_fragment, container, false)
+
+        fullViewModel =
+            ViewModelProvider(requireActivity())
+                .get(FullViewModel::class.java)
+
         listCarroViewModel =
             ViewModelProvider(this)
                 .get(ListCarroViewModel::class.java)
@@ -34,11 +42,7 @@ class ListCarroFragment : Fragment() {
         listCarroViewModel
             .msg
             .observe(viewLifecycleOwner) {
-                Snackbar.make(
-                    list_carro_layout_root,
-                    it,
-                    Snackbar.LENGTH_LONG
-                ).show()
+                showSnackbar(it)
             }
 
         listCarroViewModel
@@ -55,4 +59,23 @@ class ListCarroFragment : Fragment() {
         return view
     }
 
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        listViewCarros.setOnItemClickListener { adapterView, view, i, l ->
+            val listaCarros = listCarroViewModel.carros.value!!
+            val carro = listaCarros.get(i)
+            fullViewModel.selectCar(carro)
+            findNavController().navigate(R.id.showCarroFragment)
+        }
+    }
+
+
+    private fun showSnackbar(msg: String) {
+        Snackbar.make(
+            list_carro_layout_root,
+            msg,
+            Snackbar.LENGTH_LONG
+        ).show()
+    }
 }

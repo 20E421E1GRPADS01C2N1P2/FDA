@@ -3,6 +3,7 @@ package br.pro.aguiar.fdan1.carros.database
 import br.pro.aguiar.fdan1.carros.model.Carro
 
 class AppDatabase {
+    // private var carro: Carro? = null
     private val carros = mutableListOf(
         Carro("Fiat", "Uno", "TRF4F45", 10000f),
         Carro("Fiat", "Palio", "FDE4F84", 13000f),
