@@ -1,11 +1,12 @@
-package br.pro.aguiar.fdan1
+package br.pro.aguiar.fdan1.carros
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import br.pro.aguiar.fdan1.R
 
-class HomeLivroActivity : AppCompatActivity() {
+class FullActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home_livro)
+        setContentView(R.layout.activity_full)
     }
 }

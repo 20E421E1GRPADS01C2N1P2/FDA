@@ -1,4 +1,4 @@
-package br.pro.aguiar.fdan1
+package br.pro.aguiar.fdan1.model
 
 class Livro(
     var titulo: String,

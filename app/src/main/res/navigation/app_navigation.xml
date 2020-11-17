@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/listCarroFragment">
+
+    <fragment
+        android:id="@+id/listCarroFragment"
+        android:name="br.pro.aguiar.fdan1.carros.ui.carro.list.ListCarroFragment"
+        android:label="list_carro_fragment"
+        tools:layout="@layout/list_carro_fragment" />
+</navigation>

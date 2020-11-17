@@ -1,8 +1,9 @@
-package br.pro.aguiar.fdan1
+package br.pro.aguiar.fdan1.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import br.pro.aguiar.fdan1.R
 import kotlinx.android.synthetic.main.activity_exercicio_tres.*
 
 class ExercicioTresActivity : AppCompatActivity() {

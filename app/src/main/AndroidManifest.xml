@@ -9,12 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ExercicioCincoActivity"></activity>
+        <activity android:name=".carros.FullActivity"></activity>
+        <activity android:name=".activity.ExercicioCincoActivity" />
         <activity android:name=".navigate.MavigateActivity" />
-        <activity android:name=".HomeLivroActivity" />
-        <activity android:name=".ExercicioTresActivity" />
-        <activity android:name=".ExercicioDoisActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".activity.HomeLivroActivity" />
+        <activity android:name=".activity.ExercicioTresActivity" />
+        <activity android:name=".activity.ExercicioDoisActivity" />
+        <activity android:name=".activity.HomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

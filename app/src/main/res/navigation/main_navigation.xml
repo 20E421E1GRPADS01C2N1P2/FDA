@@ -30,12 +30,12 @@
     </fragment>
     <fragment
         android:id="@+id/dadoFragment"
-        android:name="br.pro.aguiar.fdan1.DadoFragment"
+        android:name="br.pro.aguiar.fdan1.ui.outros.DadoFragment"
         android:label="fragment_dado"
         tools:layout="@layout/fragment_dado" />
     <activity
         android:id="@+id/homeLivroActivity"
-        android:name="br.pro.aguiar.fdan1.HomeLivroActivity"
+        android:name="br.pro.aguiar.fdan1.activity.HomeLivroActivity"
         android:label="activity_home_livro"
         tools:layout="@layout/activity_home_livro" />
 </navigation>

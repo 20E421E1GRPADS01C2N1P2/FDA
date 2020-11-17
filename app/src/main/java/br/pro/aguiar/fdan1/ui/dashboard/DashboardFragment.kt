@@ -41,11 +41,11 @@ class DashboardFragment : Fragment() {
                 }
             )
 
-        dashboardViewModel
-            .valorTotal
-            .observe(viewLifecycleOwner) {
-                textViewCarValorTotal.text = it.toString()
-            }
+//        dashboardViewModel
+//            .valorTotal
+//            .observe(viewLifecycleOwner) {
+//                textViewCarValorTotal.text = it.toString()
+//            }
 
 
         btnCarrinhoAdd.setOnClickListener {

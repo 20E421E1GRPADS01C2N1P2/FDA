@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".activity.HomeActivity">
 
 
 <!--    <TextView-->
@@ -77,7 +77,7 @@
 
     <fragment
         android:id="@+id/fragment"
-        android:name="br.pro.aguiar.fdan1.DadoFragment"
+        android:name="br.pro.aguiar.fdan1.ui.outros.DadoFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -90,7 +90,7 @@
 
     <fragment
         android:id="@+id/fragment2"
-        android:name="br.pro.aguiar.fdan1.DadoFragment"
+        android:name="br.pro.aguiar.fdan1.ui.outros.DadoFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

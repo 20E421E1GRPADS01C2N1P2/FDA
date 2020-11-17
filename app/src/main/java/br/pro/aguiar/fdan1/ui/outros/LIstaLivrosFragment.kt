@@ -1,13 +1,14 @@
-package br.pro.aguiar.fdan1
+package br.pro.aguiar.fdan1.ui.outros
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import androidx.fragment.app.Fragment
+import br.pro.aguiar.fdan1.R
+import br.pro.aguiar.fdan1.model.Livro
 import kotlinx.android.synthetic.main.fragment_l_ista_livros.*
-
 
 class LIstaLivrosFragment : Fragment() {
 

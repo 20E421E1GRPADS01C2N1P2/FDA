@@ -1,12 +1,9 @@
-package br.pro.aguiar.fdan1
+package br.pro.aguiar.fdan1.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_home.*
-import java.util.*
+import br.pro.aguiar.fdan1.R
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

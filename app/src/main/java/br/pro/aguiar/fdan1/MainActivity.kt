@@ -3,6 +3,11 @@ package br.pro.aguiar.fdan1
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import br.pro.aguiar.fdan1.activity.ExercicioCincoActivity
+import br.pro.aguiar.fdan1.activity.ExercicioDoisActivity
+import br.pro.aguiar.fdan1.activity.ExercicioTresActivity
+import br.pro.aguiar.fdan1.activity.HomeActivity
+import br.pro.aguiar.fdan1.carros.FullActivity
 import br.pro.aguiar.fdan1.navigate.MavigateActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -33,25 +38,30 @@ class MainActivity : AppCompatActivity() {
                 ExercicioDoisActivity::class.java)
             startActivity(intent)
         }
-
         btnExercicio3.setOnClickListener {
             var exc3Intent = Intent(
                 this, ExercicioTresActivity::class.java
             )
             startActivity(exc3Intent)
         }
-
         btnExercicio4.setOnClickListener {
             var exc4Intent = Intent(
                 this, MavigateActivity::class.java
             )
             startActivity(exc4Intent)
         }
-
         btnExercicio5.setOnClickListener {
             startActivity(
                 Intent(
                     this, ExercicioCincoActivity::class.java
+                )
+            )
+        }
+
+        btnExercicioFull.setOnClickListener {
+            startActivity(
+                Intent(
+                    this, FullActivity::class.java
                 )
             )
         }

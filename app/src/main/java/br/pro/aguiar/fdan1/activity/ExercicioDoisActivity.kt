@@ -1,7 +1,8 @@
-package br.pro.aguiar.fdan1
+package br.pro.aguiar.fdan1.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import br.pro.aguiar.fdan1.R
 
 class ExercicioDoisActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
