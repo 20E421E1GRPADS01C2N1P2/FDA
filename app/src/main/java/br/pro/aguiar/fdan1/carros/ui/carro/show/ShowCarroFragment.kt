@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.show_carro_fragment.*
 
 class ShowCarroFragment : Fragment() {
 
-//    private lateinit var viewModel: ShowCarroViewModel
+    private lateinit var showCarroViewModel: ShowCarroViewModel
     private lateinit var fullViewModel: FullViewModel
 
     override fun onCreateView(
@@ -42,9 +42,13 @@ class ShowCarroFragment : Fragment() {
         textViewShowCarroValor.text = carro.preco.toString()
     }
 
-//    override fun onActivityCreated(savedInstanceState: Bundle?) {
-//        super.onActivityCreated(savedInstanceState)
-//        viewModel = ViewModelProvider(this).get(ShowCarroViewModel::class.java)
-//    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        fabShowCarroExcluir.setOnClickListener {
+            val carro = fullViewModel.carro.value!!
+            showCarroViewModel.delete(carro)
+        }
+    }
 
 }
