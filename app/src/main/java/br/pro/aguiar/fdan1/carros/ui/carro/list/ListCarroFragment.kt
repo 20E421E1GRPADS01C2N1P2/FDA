@@ -42,7 +42,8 @@ class ListCarroFragment : Fragment() {
         listCarroViewModel
             .msg
             .observe(viewLifecycleOwner) {
-                showSnackbar(it)
+                if (!it.isNullOrBlank())
+                    showSnackbar(it)
             }
 
         listCarroViewModel
@@ -62,11 +63,17 @@ class ListCarroFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         listViewCarros.setOnItemClickListener { adapterView, view, i, l ->
             val listaCarros = listCarroViewModel.carros.value!!
             val carro = listaCarros.get(i)
             fullViewModel.selectCar(carro)
             findNavController().navigate(R.id.showCarroFragment)
+        }
+
+        fabListCarroCadastro.setOnClickListener {
+            val navController = findNavController()
+            navController.navigate(R.id.createCarroFragment)
         }
     }
 

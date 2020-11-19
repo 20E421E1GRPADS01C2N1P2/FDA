@@ -1,4 +1,4 @@
-package br.pro.aguiar.fdan1.carros.ui.carro.list
+package br.pro.aguiar.fdan1.carros.ui.carro.create
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,11 +6,7 @@ import androidx.lifecycle.ViewModel
 import br.pro.aguiar.fdan1.carros.database.AppDatabase
 import br.pro.aguiar.fdan1.carros.model.Carro
 
-class ListCarroViewModel : ViewModel() {
-
-    private val _carros = MutableLiveData<List<Carro>>()
-    val carros: LiveData<List<Carro>>
-        get() = _carros
+class CreateCarroViewModel : ViewModel() {
 
     private val _status = MutableLiveData<Boolean>()
     val status: LiveData<Boolean>
@@ -23,17 +19,19 @@ class ListCarroViewModel : ViewModel() {
     init {
         _status.value = false
         _msg.value = null
-        getAll()
     }
 
-    fun getAll() {
-        //_msg.value = "Consultando a base de dados."
-        val appDatabase = AppDatabase.getInstance()
-        _carros.value = appDatabase.all()
+    fun store(
+        marca: String, modelo: String,
+        placa: String, preco: String) {
+        _msg.value = "Efetuando persistência dos dados."
+        val carro = Carro(marca, modelo, placa, preco.toFloat())
+        AppDatabase.getInstance().store(carro)
 
-        if (true){
+        //if (true)
+            _msg.value = "Dados cadastrados com sucesso."
             _status.value = true
-            //_msg.value = "Consulta realizada com sucesso!"
-        }
+        // else
+
     }
 }
