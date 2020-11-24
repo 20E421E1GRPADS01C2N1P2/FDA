@@ -8,8 +8,12 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import br.pro.aguiar.fdan1.R
 import br.pro.aguiar.fdan1.carros.FullViewModel
+import br.pro.aguiar.fdan1.carros.adapter.CarroRecyclerAdapter
+import br.pro.aguiar.fdan1.carros.model.Carro
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.list_carro_fragment.*
 
@@ -49,27 +53,29 @@ class ListCarroFragment : Fragment() {
         listCarroViewModel
             .carros
             .observe(viewLifecycleOwner) { carros ->
-                listViewCarros
-                    .adapter = ArrayAdapter(
-                    requireContext(),
-                    android.R.layout.simple_list_item_1,
-                    carros
-                )
+                val carroRecyclerAdapter = CarroRecyclerAdapter(carros, this::actionClick)
+                listViewCarros.adapter = carroRecyclerAdapter
+                listViewCarros.layoutManager = LinearLayoutManager(requireContext())
             }
 
         return view
     }
 
+    fun actionClick(carro: Carro) {
+        fullViewModel.selectCar(carro)
+        findNavController().navigate(R.id.showCarroFragment)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        listViewCarros.setOnItemClickListener { adapterView, view, i, l ->
-            val listaCarros = listCarroViewModel.carros.value!!
-            val carro = listaCarros.get(i)
-            fullViewModel.selectCar(carro)
-            findNavController().navigate(R.id.showCarroFragment)
-        }
+        // (Carro) -> Unit
+//        listViewCarros.setOnItemClickListener { adapterView, view, i, l ->
+//            val listaCarros = listCarroViewModel.carros.value!!
+//            val carro = listaCarros.get(i)
+//            fullViewModel.selectCar(carro)
+//            findNavController().navigate(R.id.showCarroFragment)
+//        }
 
         fabListCarroCadastro.setOnClickListener {
             val navController = findNavController()
