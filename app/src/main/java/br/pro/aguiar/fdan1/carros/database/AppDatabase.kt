@@ -19,6 +19,10 @@ class AppDatabase {
         carros.add(carro)
     }
 
+    fun delete(carro: Carro) {
+        carros.remove(carro)
+    }
+
     companion object {
         private var instance: AppDatabase? = null
         fun getInstance(): AppDatabase {

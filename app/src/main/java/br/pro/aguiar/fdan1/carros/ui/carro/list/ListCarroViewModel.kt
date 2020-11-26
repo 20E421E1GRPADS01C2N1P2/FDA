@@ -36,4 +36,9 @@ class ListCarroViewModel : ViewModel() {
             //_msg.value = "Consulta realizada com sucesso!"
         }
     }
+
+    fun delete(carro: Carro){
+        AppDatabase.getInstance().delete(carro)
+    }
+
 }
