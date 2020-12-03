@@ -1,0 +1,5 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FDAN1" parent="Theme.AppCompat">
+    </style>
+</resources>

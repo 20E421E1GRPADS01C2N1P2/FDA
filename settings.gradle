@@ -1,2 +1,3 @@
+include ':parimpar'
 include ':app'
 rootProject.name = "FDAN1"
